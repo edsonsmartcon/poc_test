@@ -30,6 +30,7 @@ class Poc extends StatefulWidget {
 class _PocState extends State<Poc> {
   @override
   Widget build(BuildContext context) {
+    print('test');
     return Scaffold(
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
