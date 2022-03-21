@@ -35,28 +35,30 @@ class _PocState extends State<Poc> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Builder(builder: (context) {
-          return NestedScrollView(
-            headerSliverBuilder: (context, innerBoxIsScrolled) {
-              return [
-                SliverToBoxAdapter(
-                  child: Container(
-                    width: 200,
-                    height: 200,
-                    color: Colors.red,
-                  ),
-                )
-              ];
-            },
-            body: SizedBox(
-              width: 200,
-              height: 400,
-              child: ListView.builder(
-                itemCount: 80,
-                itemBuilder: (context, index) => const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: SizedBox(
-                    height: 20,
-                    width: 100,
+          return Container(
+            child: NestedScrollView(
+              headerSliverBuilder: (context, innerBoxIsScrolled) {
+                return [
+                  SliverToBoxAdapter(
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      color: Colors.red,
+                    ),
+                  )
+                ];
+              },
+              body: SizedBox(
+                width: 200,
+                height: 400,
+                child: ListView.builder(
+                  itemCount: 80,
+                  itemBuilder: (context, index) => const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: SizedBox(
+                      height: 20,
+                      width: 100,
+                    ),
                   ),
                 ),
               ),
